@@ -1,9 +1,9 @@
-import { generateAccessToken, generateRefreshToken } from '@/lib/jwt';
-import { logger } from '@/lib/winston';
-import config from '@/config';
-import User from '@/models/user';
+import { generateAccessToken, generateRefreshToken } from '../../lib/jwt';
+import { logger } from '../../lib/winston';
+import config from '../../config';
+import User from '../../models/user';
 import type { Request, Response } from 'express';
-import type { IUser } from '@/models/user';
+import type { IUser } from '../../models/user';
 
 type RequestBody = Pick<IUser, 'email'>;
 

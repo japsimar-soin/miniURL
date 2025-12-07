@@ -1,11 +1,11 @@
 import type { Request, Response } from 'express';
 import bcrypt from 'bcrypt';
-import { logger } from '@/lib/winston';
-import config from '@/config';
-import User from '@/models/user';
-import type { IUser } from '@/models/user';
-import { generateMongooseId } from '@/utils';
-import { generateAccessToken, generateRefreshToken } from '@/lib/jwt';
+import { logger } from '../../lib/winston';
+import config from '../../config';
+import User from '../../models/user';
+import type { IUser } from '../../models/user';
+import { generateMongooseId } from '../../utils';
+import { generateAccessToken, generateRefreshToken } from '../../lib/jwt';
 
 type RequestBody = Pick<IUser, 'name' | 'email' | 'password' | 'role'>;
 

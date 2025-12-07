@@ -1,12 +1,12 @@
 import { Router } from 'express';
 import { body } from 'express-validator';
 
-import expressRateLimit from '@/lib/expressRateLimit';
-import validationError from '@/middlewares/validationError';
-import createLink from '@/controllers/links/createLink';
-import listLinks from '@/controllers/links/listLinks';
-import getLinkStats from '@/controllers/links/getLinkStats';
-import deleteLink from '@/controllers/links/deleteLink';
+import expressRateLimit from '../lib/expressRateLimit';
+import validationError from '../middlewares/validationError';
+import createLink from '../controllers/links/createLink';
+import listLinks from '../controllers/links/listLinks';
+import getLinkStats from '../controllers/links/getLinkStats';
+import deleteLink from '../controllers/links/deleteLink';
 
 const router = Router();
 

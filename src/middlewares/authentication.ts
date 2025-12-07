@@ -1,9 +1,9 @@
 import type { Request, Response, NextFunction } from 'express';
 import { TokenExpiredError, JsonWebTokenError } from 'jsonwebtoken';
-import { TokenPayload } from '@/lib/jwt';
-import { logger } from '@/lib/winston';
+import { TokenPayload } from '../lib/jwt';
+import { logger } from '../lib/winston';
 
-import { verifyAccessToken } from '@/lib/jwt';
+import { verifyAccessToken } from '../lib/jwt';
 
 const authentication = (
   req: Request,

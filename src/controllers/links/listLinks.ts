@@ -1,5 +1,5 @@
-import { logger } from '@/lib/winston';
-import Link from '@/models/link';
+import { logger } from '../../lib/winston';
+import Link from '../../models/link';
 import type { Request, Response } from 'express';
 
 const listLinks = async (req: Request, res: Response): Promise<void> => {

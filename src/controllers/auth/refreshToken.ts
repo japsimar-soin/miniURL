@@ -1,7 +1,7 @@
-import { verifyRefreshToken, generateAccessToken } from '@/lib/jwt';
-import { logger } from '@/lib/winston';
+import { verifyRefreshToken, generateAccessToken } from '../../lib/jwt';
+import { logger } from '../../lib/winston';
 import type { Request, Response } from 'express';
-import type { TokenPayload } from '@/lib/jwt';
+import type { TokenPayload } from '../../lib/jwt';
 import { JsonWebTokenError, TokenExpiredError } from 'jsonwebtoken';
 
 const refreshToken = async (req: Request, res: Response): Promise<void> => {

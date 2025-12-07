@@ -1,6 +1,6 @@
-import { logger } from '@/lib/winston';
-import config from '@/config';
-import User from '@/models/user';
+import { logger } from '../../lib/winston';
+import config from '../../config';
+import User from '../../models/user';
 import type { Request, Response } from 'express';
 
 const logout = async (req: Request, res: Response): Promise<void> => {

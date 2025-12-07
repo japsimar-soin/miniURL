@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import config from '@/config';
+import config from '../config';
 import type { Types } from 'mongoose';
 import { JwtPayload } from 'jsonwebtoken';
 

@@ -1,4 +1,4 @@
-import '@/types/express';
+import './types/express';
 import express from 'express';
 import helmet from 'helmet';
 import cookieParser from 'cookie-parser';
@@ -6,12 +6,12 @@ import compression from 'compression';
 import cors from 'cors';
 import path, { join } from 'path';
 
-import config from '@/config';
-import corsOptions from '@/lib/cors';
-import { logger, logtail } from '@/lib/winston';
+import config from './config';
+import corsOptions from './lib/cors';
+import { logger, logtail } from './lib/winston';
 import { connectDatabase, disconnectDatabase } from './lib/mongoose';
 
-import router from '@/routes';
+import router from './routes';
 
 const server = express();
 

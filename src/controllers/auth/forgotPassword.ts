@@ -1,10 +1,10 @@
-import { generatePasswordResetToken } from '@/lib/jwt';
-import { logger } from '@/lib/winston';
-import User from '@/models/user';
+import { generatePasswordResetToken } from '../../lib/jwt';
+import { logger } from '../../lib/winston';
+import User from '../../models/user';
 import type { Request, Response } from 'express';
-import type { IUser } from '@/models/user';
-import nodemailerTransport from '@/lib/nodemailer';
-import { resetLinkTemplate } from '@/mailTemplates/resetLink';
+import type { IUser } from '../../models/user';
+import nodemailerTransport from '../../lib/nodemailer';
+import { resetLinkTemplate } from '../../mailTemplates/resetLink';
 
 type RequestBody = Pick<IUser, 'email'>;
 

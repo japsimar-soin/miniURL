@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 
-import config from '@/config';
+import config from '../config';
 
 const nodemailerTransport = nodemailer.createTransport({
   //CHECK BUG

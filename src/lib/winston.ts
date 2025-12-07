@@ -1,7 +1,7 @@
 import { createLogger, format, transports, transport } from 'winston';
 import { Logtail } from '@logtail/node';
 import { LogtailTransport } from '@logtail/winston';
-import config from '@/config';
+import config from '../config';
 
 const transportation: transport[] = [];
 

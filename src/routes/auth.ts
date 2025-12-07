@@ -2,15 +2,15 @@ import { Router } from 'express';
 import { body } from 'express-validator';
 import bcrypt from 'bcrypt';
 
-import expressRateLimit from '@/lib/expressRateLimit';
-import User from '@/models/user';
-import register from '@/controllers/auth/register';
-import login from '@/controllers/auth/login';
-import logout from '@/controllers/auth/logout';
-import validationError from '@/middlewares/validationError';
-import authentication from '@/middlewares/authentication';
-import refreshToken from '@/controllers/auth/refreshToken';
-import forgotPassword from '@/controllers/auth/forgotPassword';
+import expressRateLimit from '../lib/expressRateLimit';
+import User from '../models/user';
+import register from '../controllers/auth/register';
+import login from '../controllers/auth/login';
+import logout from '../controllers/auth/logout';
+import validationError from '../middlewares/validationError';
+import authentication from '../middlewares/authentication';
+import refreshToken from '../controllers/auth/refreshToken';
+import forgotPassword from '../controllers/auth/forgotPassword';
 
 const router = Router();
 

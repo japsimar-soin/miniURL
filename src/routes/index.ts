@@ -1,9 +1,9 @@
 import { Router } from 'express';
 import { join } from 'path';
-import authRoute from '@/routes/auth';
-import linksRoute from '@/routes/links';
-import redirectLink from '@/controllers/links/redirectLink';
-import expressRateLimit from '@/lib/expressRateLimit';
+import authRoute from '../routes/auth';
+import linksRoute from '../routes/links';
+import redirectLink from '../controllers/links/redirectLink';
+import expressRateLimit from '../lib/expressRateLimit';
 
 const router = Router();
 

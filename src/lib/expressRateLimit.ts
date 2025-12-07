@@ -1,6 +1,6 @@
 import { rateLimit } from 'express-rate-limit';
 
-import config from '@/config';
+import config from '../config';
 import type { RateLimitRequestHandler, Options } from 'express-rate-limit';
 
 type RateLimitType = 'basic' | 'auth' | 'passReset';
