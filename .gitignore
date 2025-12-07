@@ -1,0 +1,114 @@
+# ─────────────────────────────────────────────
+# Node
+# ─────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# ─────────────────────────────────────────────
+# Build outputs
+# ─────────────────────────────────────────────
+dist/
+build/
+out/
+.tmp/
+temp/
+
+# Next.js or other frameworks (clients)
+.next/
+.vercel/
+
+# ─────────────────────────────────────────────
+# Environment
+# ─────────────────────────────────────────────
+.env
+.env.*.local
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+
+# ─────────────────────────────────────────────
+# Logs
+# ─────────────────────────────────────────────
+logs/
+*.log
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+lerna-debug.log*
+
+# ─────────────────────────────────────────────
+# Coverage
+# ─────────────────────────────────────────────
+coverage/
+.nyc_output/
+
+# ─────────────────────────────────────────────
+# TypeScript
+# ─────────────────────────────────────────────
+*.tsbuildinfo
+
+# Ignore compiled JS if using tsc output
+**/*.js
+**/*.js.map
+
+# Allow JS inside src if handwritten (uncomment if required)
+# !src/**/*.js
+
+# ─────────────────────────────────────────────
+# OS / Editors
+# ─────────────────────────────────────────────
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Linux
+*~
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.bak
+
+# JetBrains
+*.iml
+
+# ─────────────────────────────────────────────
+# Misc
+# ─────────────────────────────────────────────
+
+# Env artifacts
+*.pid
+*.seed
+*.retry
+*.lock
+
+# Local scripts
+scripts/local/
+
+# Generated assets
+public/uploads/
+public/temp/
+public/.cache/
+
+# Ignore all mail templates if compiled/generated
+# mailTemplates/compiled/
+
+# Ignore Qdrant or vector DB local files if any
+data/
+qdrant/
