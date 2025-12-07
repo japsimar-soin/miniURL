@@ -15,7 +15,7 @@ import router from '@/routes';
 
 const server = express();
 
-server.use(cors(corsOptions));
+server.use(cors({origin: "*"}));
 
 // server.use(
 //   helmet({
@@ -51,6 +51,7 @@ server.get("/code/:code", (req, res) => {
 });
 
 server.use('/', router);
+const PORT = config.PORT || 3000;
 
 (async function (): Promise<void> {
   try {
@@ -68,8 +69,8 @@ server.use('/', router);
     );
   }
 
-  server.listen(config.PORT, () => {
-    logger.info(`Server is listening at ${config.PORT}`);
+  server.listen(PORT, () => {
+    logger.info(`Server is listening at ${PORT}`);
   });
 })();
 
