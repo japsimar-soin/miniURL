@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiniURL - Link Statistics</title>
+
+    <link rel="stylesheet" href="../styles/stats-styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <a href="/pages/dashboard.html" class="back-link">
+        ← Back to Dashboard
+      </a>
+
+      <header class="header">
+        <h1>Link Statistics</h1>
+      </header>
+
+      <div class="card">
+        <div id="statsContainer">
+          <div class="state loading">Loading stats...</div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="../scripts/stats.js"></script>
+  </body>
+</html>
