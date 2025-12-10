@@ -22,10 +22,8 @@ const createLink = async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
-    // Generate code if not provided
     let finalCode = code?.trim();
     if (!finalCode) {
-      // Generate a random 6-character code
       const chars =
         'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
       finalCode = '';
@@ -33,7 +31,6 @@ const createLink = async (req: Request, res: Response): Promise<void> => {
         finalCode += chars.charAt(Math.floor(Math.random() * chars.length));
       }
     } else {
-      // Validate custom code length
       if (finalCode.length !== 6) {
         res.status(400).json({
           code: 'BadRequest',
@@ -42,7 +39,6 @@ const createLink = async (req: Request, res: Response): Promise<void> => {
         return;
       }
 
-      // Validate custom code format
       if (!/^[a-zA-Z0-9]+$/.test(finalCode)) {
         res.status(400).json({
           code: 'BadRequest',
@@ -52,7 +48,6 @@ const createLink = async (req: Request, res: Response): Promise<void> => {
       }
     }
 
-    // Check if code already exists
     const existingLink = await Link.findOne({ code: finalCode }).exec();
     if (existingLink) {
       res.status(409).json({
@@ -62,7 +57,6 @@ const createLink = async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
-    // Create the link
     const link = await Link.create({
       code: finalCode,
       targetUrl,

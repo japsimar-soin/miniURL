@@ -1,7 +1,6 @@
 import { getLinkStats } from "./api.js";
 import { renderStats, renderError } from "./renderStats.js";
 
-// Get code from URL
 const pathParts = window.location.pathname.split("/");
 const code = pathParts[pathParts.length - 1];
 

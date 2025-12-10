@@ -12,8 +12,7 @@ export function initFormValidation(form) {
         updateButtonState();
       });
     });
-  
-    // Run once on load
+
     updateButtonState();
   }
   

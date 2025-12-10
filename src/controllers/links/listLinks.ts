@@ -8,7 +8,6 @@ const listLinks = async (req: Request, res: Response): Promise<void> => {
 
     let query = {};
 
-    // Optional search/filter by code or URL
     if (search && typeof search === 'string') {
       query = {
         $or: [
@@ -36,6 +35,3 @@ const listLinks = async (req: Request, res: Response): Promise<void> => {
 };
 
 export default listLinks;
-
-
-

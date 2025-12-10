@@ -21,18 +21,14 @@ router.get('/healthz', (req, res) => {
 router.use('/api/auth', authRoute);
 router.use('/api/links', linksRoute);
 
-// Frontend pages
-// Dashboard - list all links, add, delete
 router.get('/', (req, res) => {
   res.sendFile(join(process.cwd(), 'public', 'dashboard.html'));
 });
 
-// Stats page for a single code
 router.get('/code/:code', (req, res) => {
   res.sendFile(join(process.cwd(), 'public', 'stats.html'));
 });
 
-// Redirect route - must be last to catch all /:code patterns
 router.get('/:code', expressRateLimit('basic'), redirectLink);
 
 export default router;

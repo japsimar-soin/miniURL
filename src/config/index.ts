@@ -2,8 +2,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-//CHECK BUG
-const CORS_WHITELIST = ['https://miniurl.com'];
+const CORS_WHITELIST = ['https://miniurl-ta0w.onrender.com'];
 const _1H_IN_MILLISECONDS = 1000 * 60 * 60;
 const _7DAYS_IN_MILLISECONDS = 1000 * 60 * 60 * 24 * 7;
 

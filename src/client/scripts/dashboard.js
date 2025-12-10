@@ -4,8 +4,6 @@ import { showMessage } from './utils.js';
 import { initFormValidation, getFormData } from './events.js';
 
 let allLinks = [];
-// let sortColumn = null;
-// let sortDirection = "asc";
 
 document.addEventListener('DOMContentLoaded', async () => {
   initForm();
