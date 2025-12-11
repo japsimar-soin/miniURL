@@ -15,13 +15,10 @@ const redirectLink = async (req: Request, res: Response): Promise<void> => {
       });
       return;
     }
-
-    // Increment click count and update last clicked time
     link.totalClicks += 1;
     link.lastClickedAt = new Date();
     await link.save();
 
-    // Perform HTTP 302 redirect
     res.redirect(302, link.targetUrl);
   } catch (error) {
     res.status(500).json({
@@ -34,7 +31,3 @@ const redirectLink = async (req: Request, res: Response): Promise<void> => {
 };
 
 export default redirectLink;
-
-
-
-

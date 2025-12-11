@@ -11,7 +11,6 @@ const createLink = async (req: Request, res: Response): Promise<void> => {
   const { targetUrl, code } = req.body as RequestBody;
 
   try {
-    // Validate URL
     try {
       new URL(targetUrl);
     } catch {
@@ -23,18 +22,22 @@ const createLink = async (req: Request, res: Response): Promise<void> => {
     }
 
     let finalCode = code?.trim();
+
     if (!finalCode) {
       const chars =
         'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+
+      const length = Math.floor(Math.random() * 3) + 6;
+
       finalCode = '';
-      for (let i = 0; i < 6; i++) {
+      for (let i = 0; i < length; i++) {
         finalCode += chars.charAt(Math.floor(Math.random() * chars.length));
       }
     } else {
-      if (finalCode.length !== 6) {
+      if (finalCode.length < 6 || finalCode.length > 8) {
         res.status(400).json({
           code: 'BadRequest',
-          message: 'Code must be exactly 6 characters',
+          message: 'Code must be between 6 and 8 characters',
         });
         return;
       }
