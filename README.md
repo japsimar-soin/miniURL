@@ -1,3 +1,2 @@
-## miniURL - URL Shortener 
+# [miniURL - URL Shortener](https://miniurl-ta0w.onrender.com) 
 
-[miniURL](https://miniurl-ta0w.onrender.com)
